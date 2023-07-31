@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Table Border</title>
+</head>
+<body>
+    <h2>Table with Border</h2>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+    <button onclick="changeTableBorder()">Change Border</button>
+
+    <script>
+        function changeTableBorder() {
+            var table = document.getElementById("myTable");
+            var currentBorder = parseInt(table.getAttribute("border"), 10);
+
+            // Incrementing the border value to change the thickness
+            var newBorder = currentBorder + 1;
+
+            // Setting the new border value
+            table.setAttribute("border", newBorder.toString());
+        }
+    </script>
+</body>
+</html>

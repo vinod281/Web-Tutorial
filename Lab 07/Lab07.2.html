@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enable/Disable Video on Mouse Events</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+    <video id="videoPlayer" width="640" height="360" controls>
+        <source src="js.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        var video = document.getElementById("videoPlayer");
+
+        // Function to play the video
+        function playVideo() {
+            video.play();
+        }
+
+        // Function to pause the video
+        function pauseVideo() {
+            video.pause();
+        }
+
+        // Add event listeners for mouse events
+        video.addEventListener("mouseover", playVideo);
+        video.addEventListener("mouseout", pauseVideo);
+    </script>
+</body>
+</html>
